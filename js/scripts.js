@@ -10,6 +10,10 @@ function Player(name, roundScore, hold, totalScore) {
   this.totalScore =  totalScore;
 }
 
+Player.prototype.currentScore = function() {
+
+}
+
 Player.prototype.roll = function(randomNum) {
   return this.roundScore += randomNum;
 }
@@ -37,10 +41,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     var randomNum = generateRandom();
-    var currentScore = player1.roll(randomNum);
+    var roundScore = player1.roll(randomNum);
 
     $(".randomNumberDisplay").text(randomNum);
-    $(".roundScoreDisplay").text(currentScore);
+    $(".roundScoreDisplay").text(roundScore);
+
   });
   $("#rollDice2").click(function(event) {
     event.preventDefault();
@@ -50,11 +55,7 @@ $(document).ready(function() {
 
     $(".randomNumberDisplay").text(randomNum);
     $(".roundScoreDisplay").text(currentScore);
-  
 
-    if (randomNum == 1) {
-      currentScore = 0;
-    }
   });
   $("#exit").click(function() {
     $("#gameConsole").hide();
