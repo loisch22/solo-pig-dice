@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+}
+#gameConsole {
+  display: none;
+}
+.randomNumberDisplay {
+  border: solid 8px #ff9e99;
+  padding: 30px;
+  height: 200px;
+  font-size: 40px
+}
+.roundScoreDisplay {
+  border: solid 2px;
+  padding: 30px;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  font-size: 30px;
+}
+.col-md-4 h3 {
+  margin-top: 5%;
+}
+#rollDice1, #rollDice2, #rollDice1:hover, #rollDice2:hover {
+  border: none;
+  background: transparent;
+}
+
+#rollDice1:active, #rollDice2:active {
+  border: #dddddd;
+  background: transparent;
+}
+
+#rollDice1 img, #rollDice2 img {
+  width: 30%;
+
+}
