@@ -50,6 +50,11 @@ $(document).ready(function() {
 
     $(".randomNumberDisplay").text(randomNum);
     $(".roundScoreDisplay").text(currentScore);
+  
+
+    if (randomNum == 1) {
+      currentScore = 0;
+    }
   });
   $("#exit").click(function() {
     $("#gameConsole").hide();
